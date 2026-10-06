@@ -1,0 +1,25 @@
+model_id: model_005_final
+units: meters
+model_frame: object_model_center
+mesh: object_foundationpose.obj
+source_dataset: object_005
+axis_convention: axes parallel to ChArUco board frame
+# The main body is a near-cylindrical bottle. Its axial yaw is weakly
+# observable and is not needed by the grasp geometry. FoundationPose can
+# canonicalize that one degree of freedom while retaining position and tilt.
+pose_stabilization:
+  mode: axial_lock
+  axis: [0.0, 0.0, 1.0]
+  lock_axial_rotation: true
+extents_m:
+- 0.079616
+- 0.078318
+- 0.236537
+points_after_manual_cleaning: 51152
+mesh_vertices: 172
+mesh_faces: 340
+mesh_quality:
+  topology: convex_hull
+  face_winding: consistent_outward
+  normals_ready_for_foundationpose: true
+warning: Historical convex-hull mesh from a manually cleaned point cloud; the point cloud is not bundled in this lightweight example.

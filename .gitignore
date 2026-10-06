@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+/runtime/
+/upstream/weights/
+/upstream/mycpp/build/
+*.so
+*.o
+/upstream/debug/
+/upstream/demo_data/
