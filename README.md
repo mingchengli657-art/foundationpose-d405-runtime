@@ -1,5 +1,9 @@
 # FoundationPose D405 Runtime
 
+**Piper 视觉抓取系列 · 03 / 连续位姿跟踪** · [系列总入口与整套运行指南](https://github.com/mingchengli657-art/piper-vision-grasping)
+
+本模块使用[物体建模](https://github.com/mingchengli657-art/d405-object-modeling)导出的模型；位姿可经[手眼标定](https://github.com/mingchengli657-art/piper_handeye_calibration)结果转换后交给 [Piper 控制](https://github.com/mingchengli657-art/piper-known-object-control)。
+
 将 Intel RealSense D405 的 RGB-D 输入接入 FoundationPose，持续绘制已知物体的三维框和坐标轴，并发布相机坐标系下的 6D 位姿。由机器人比赛工程中的 `Piper_Control/Foundation Pose` 提取。
 
 本项目的工作是 **D405 接入、ROS 与 GPU 环境分离、帧队列、模型检查、深度一致性筛选、跟踪丢失状态以及对称物体姿态稳定**。FoundationPose 网络和推理算法来自 [NVIDIA NVlabs/FoundationPose](https://github.com/NVlabs/FoundationPose)，随包 `upstream/` 保留了本地使用的源码快照及许可证。
